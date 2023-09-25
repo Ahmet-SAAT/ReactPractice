@@ -2,6 +2,8 @@ import React from 'react'
 import RandomImage from './components/c11/RandomImage'
 import Sairler from './components/c12/Sairs'
 import Paragraph from './components/c13/Paragraph'
+import Listele from './components/c14/Listele'
+import Countries from './components/c15/Countries'
 /*import Kisiler from './components/c8/Kisiler'*/
 /*import StudentCard from './components/c9/StudentCard'*/
 /*import Shop from './components/c10/Shop'*/
@@ -41,12 +43,8 @@ const App = () => {
 <RandomImage/>
 <Sairler/>
 <Paragraph/>
-
-
-
-
-
-
+<Listele/>
+<Countries/>
 
 
     </div>

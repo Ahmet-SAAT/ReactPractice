@@ -1,12 +1,15 @@
 import React, { useState } from "react";
 import data from "./data";
-import "./text.css";
+/* import "./text.css"; */
+
 const Paragraph = () => {
   const [count, setCount] = useState(0);
   const [text, setText] = useState([]);
+
   const handleGenerate = (e) => {
-    e.preventDefault();//formdan gelen default bilgilerini engelledik
+    e.preventDefault();
     let amount = count;
+
     if (count <= 0) {
       amount = 1;
     }
@@ -15,10 +18,14 @@ const Paragraph = () => {
     }
     setText(data.slice(0,amount))
   };
+
+
   const handleCleare = () => {
       setCount(0)
       setText([])
   }
+
+
   return (
     <section className="section-center">
       <h3>HOW MANY PARAGRAPHS</h3>
@@ -39,10 +46,15 @@ const Paragraph = () => {
       </form>
       <div className="lorem-text">
         {
+
             text.map((item,index)=><p key={index}>{item}</p>)
         }
       </div>
+
+
+
     </section>
   );
 };
+
 export default Paragraph;
